@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.title{
+    text-align: center;
+    color: cyan;
+}
+.img{
+    width: 750px;
+    height: 400px;
+}
+.right{
+    float: right;
+}
+.leftbox{
+    float: left;
+}
+.rightbox{
+    float: right;
+}
+.righttxt{
+    width: 750px;
+    height: 400px;
+    float: right;
+}
+.lefttxt{
+    width: 750px;
+    height: 400px;
+    float: left;
+}
+.text{
+    text-align: center;
+    padding-top: 150px;
+    color: cyan;
+}
