@@ -1,0 +1,45 @@
+li{
+    position: relative;
+    display: flex;
+    left: 32rem;
+    align-items: center;
+}
+text{
+    position: relative;
+    color: palegoldenrod;
+    font-weight: bolder;
+    left: 12rem;
+}
+.create{
+    width: 2pc;
+    height: 2pc;
+    position: absolute;
+    cursor: pointer;
+}
+span{
+    position: relative;
+    left: 12%;
+	top: -12%;
+    padding: 5px; 
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    color: coral;
+    border-bottom: 2px solid palegreen;
+}
+button{
+    position: absolute;
+    right: 13pc;
+    border: none;
+    background-color: transparent;
+    color:gold;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-shadow: 2px 3px 4px paleturquoise;
+    opacity: .4;
+}
+button:hover{
+    opacity: 1;
+    transition: all 1s ease;
+}
