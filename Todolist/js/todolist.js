@@ -5,7 +5,8 @@ $(function(){
         if(e.keyCode===13){
             //调用getlocal()函数获取本地存储中的值
             if($(this).val()===""){
-                alert('你还未填写任何内容哦！');
+                $("body").append("<p class='add'>请填写内容！</p>")
+                $(".add").fadeOut(1500);
             }
             else{
                 let getData=getLocal();
