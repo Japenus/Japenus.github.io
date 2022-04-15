@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.nav-list li{
+    list-style: none;
+}
+.title-a{
+    font-size: 40px;
+}
+body{
+    background: url("../background/06.jpg");
+}
+.nav-list li a{
+    font-family: cursive;
+    font-weight: bold;
+    color:whitesmoke;
+    line-height: 5pc;
+    list-style: none;
+    text-decoration: none;
+    margin: 2rem;
+}
+.nav-list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    z-index: 100;
+    position: fixed;
+}
+.nav-list>li>ul{
+    text-align: center;
+    font-size: 25px;
+}
+.effect{
+    background-color: rgba(245, 222, 179, 0.411);
+}
+.welcome{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    top: 20pc;
+    left: 17rem;
+    width: 60%;
+    z-index: 3;
+    height: 20vh;
+    font-size: 50px;
+    color:palegreen;
+}
+.ul-dot{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 5pc;
+    z-index: 2;
+    top: 70vh;
+    left: 5rem;
+    width: 20rem;
+}
+.ul-dot li{
+    position: relative;
+    margin: 0 30px;
+    right: -1rem;
+}
+.ul-dot li:hover{
+    color: mediumspringgreen;
+}
+.ul-dot>li::marker{
+    display: list-item;
+    font-size: 60px;
+    content: '>';
+}
+.hide{
+    display: none;
+}
+.current{
+    color: cornsilk;
+}
+.demo-show{
+    position: absolute;
+    top: 41vw;
+    left: 7rem;
+    display: grid;
+    width: 85%;
+    height: 160vh;
+    grid-template-columns: 100px 100px;
+    grid-column-gap: 35rem;
+    background: url('../background/02.jpg');
+    z-index: 1;
+}
+.demo-show div{
+    width: 630px;
+    height: 630px;
+    background: url('../background/05.jpg');
+}
+footer{
+    position: absolute;
+    top: 124vw;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+footer::before{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+        120deg,
+        rgba(68, 255, 51, 0.945),
+        rgb(0, 140, 255),
+        rgb(0, 60, 255),
+        rgb(255, 0, 255)
+    );
+    border-radius: 5px;
+    filter: blur(20px);
+    z-index:-1 ;
+}
+.Create-Symbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    width: 40rem;
+    height: 10rem;
+    float: left;
+}
+.Contact{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+    right: 10px;
+    color: whitesmoke;
+    font-family: cursive;
+    font-size: 30px;
+    width: 40rem;
+    height: 10rem;
+}
+.Rights{
+    position: relative;
+    width: 100%;
+    height: 10pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    font-family: style;
+}
+.Rights a{
+    color: mediumspringgreen;
+    text-decoration: none;
+}
+.demo-show>div>embed{
+    width: 630px;
+    height: 630px;
+}
+#Contact-img-qq{
+    position: relative;
+    width: 8rem;
+    left: 0;
+    height: 6rem;
+}
+#Contact-img-wechat{
+    position: relative;
+    right: 0;
+    width: 8rem;
+    height: 6rem;
+}
+#QRqq{
+    position: absolute;
+    width: 5pc;
+    top: 15vh;
+    left: 17rem;
+    height: 5pc;
+}
+#QRweChat{
+    position: absolute;
+    top: 15vh;
+    width: 5pc;
+    right: 4rem;
+    height: 5pc;
+}
