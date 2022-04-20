@@ -1,0 +1,10 @@
+del *.plg
+del *.ncb
+del *.opt
+del *.dsp
+del *.dsw
+del debug\*.ilk
+del debug\*.obj
+del debug\*.pch
+del debug\*.pdb
+del debug\*.idb

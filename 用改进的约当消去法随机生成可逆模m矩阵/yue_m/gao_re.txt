@@ -1,0 +1,162 @@
+#include"stdio.h"
+#include"stdlib.h"
+#include"math.h"
+#include"string.h"
+int mod(int c,int m)
+{ if(c>=0)return c%m;
+   else return m+c%m;
+}
+int gcd(int a,int m)
+{  int r;
+  r=1;
+ while(r!=0)
+ {
+   r=mod(a,m);
+   a=m;
+   m=r; 
+ }
+ return a;
+}
+int *table;
+void ini(int m)
+{ int i,j;
+  
+  table[0]=0;
+  table[1]=1;
+  for(i=2;i<m;i++)
+  { for(j=2;j<m;j++)
+  if(mod(i*j,m)==1)break;
+     table[i]=j;
+  }
+}
+int hls(int md,int n, int **a) 
+{ 
+int s=1; 
+int i,j,h,k;
+int temp;
+int **b;
+b=(int **)calloc(n,sizeof(int *));
+for(i=0;i<n;i++)
+b[i]=(int *)calloc(n,sizeof(int));
+for(i=0;i<n;i++)
+for(j=0;j<n;j++)
+b[i][j]=a[i][j];
+for(i=0;i<n;i++)
+{
+	h=i;
+	for(j=i;j<n;j++)
+		if(gcd(b[j][i],md)==1){h=j;
+		break;}
+if(j==n)return 0;
+    if(h>i)
+	for(j=0;j<n;j++)
+		  { temp=b[i][j];
+		    b[i][j]=b[h][j];
+			b[h][j]=temp;
+		  }
+	for(j=i+1;j<n;j++)
+	b[i][j]=mod(b[i][j]*table[b[i][i]],md);
+		for(j=i+1;j<n;j++)
+		{for(k=i+1;k<n;k++)
+				b[j][k]=mod(b[j][k]-b[j][i]*b[i][k],md);
+			 b[j][i]=0;
+			}
+
+}
+for(i=0;i<n;i++)
+{s*=b[i][i];
+s=mod(s,md);}
+for(i=0;i<n;i++)
+free(b[i]);
+free(b);
+return s;
+}  
+void re_verse(char *filename)
+{ FILE *fp;
+  
+  int n,i,j,h,k;
+int **a,**b,**x,temp,m,sum;
+ 
+  fp=fopen(filename,"r");
+  if(fp==NULL)
+  { printf("%s doesn't exist.\n",filename);
+    system("pause");
+	exit(-1);
+  }
+  fscanf(fp,"%d%d",&m,&n);
+  a=(int**)calloc(n,sizeof(int*));
+  for(i=0;i<n;i++)
+	  a[i]=(int *)calloc(n,sizeof(int));
+  b=(int **)calloc(n,sizeof(int*));
+  for(i=0;i<n;i++)
+	  b[i]=(int*)calloc(n,sizeof(int));
+ x=(int**)calloc(n,sizeof(int*));
+  for(i=0;i<n;i++)
+	  x[i]=(int *)calloc(n,sizeof(int));
+  for(i=0;i<n;i++)
+	 for(j=0;j<n;j++)
+		  fscanf(fp,"%d",&a[i][j]);
+          fclose(fp);
+    for(i=0;i<n;i++)
+      for(j=0;j<n;j++)
+		 if(i==j)b[i][j]=1;
+		 else b[i][j]=0;
+for(i=0;i<n;i++)
+{
+	h=i;
+	for(j=i;j<n;j++)
+		if(gcd(a[j][i],m)==1){h=j;
+		break;}
+    if(h>i)
+	for(j=0;j<n;j++)
+		  { temp=a[i][j];
+		    a[i][j]=a[h][j];
+			a[h][j]=temp;
+            temp=b[i][j];
+		    b[i][j]=b[h][j];
+			b[h][j]=temp;
+		  }
+if(a[i][i]==0)
+{ printf("a[%d][%d]=%d",i,i,a[i][i]);
+return;
+}
+	for(j=i+1;j<n;j++)
+	a[i][j]=mod(a[i][j]*table[a[i][i]],m);
+    for(j=0;j<n;j++)
+	b[i][j]=mod(b[i][j]*table[a[i][i]],m);
+		for(j=i+1;j<n;j++)
+		{for(k=i+1;k<n;k++)
+				a[j][k]=mod(a[j][k]-a[j][i]*a[i][k],m);
+               for(k=0;k<n;k++)
+				 b[j][k]=mod(b[j][k]-b[i][k]*a[j][i],m);
+			 a[j][i]=0;
+			}
+a[i][i]=1;
+
+  }
+for(k=0;k<n;k++)
+{
+for(i=n-1;i>=0;i--)
+{ sum=0;
+  for(j=i+1;j<n;j++)
+	  sum+=a[i][j]*x[j][k];
+  x[i][k]=mod(b[i][k]-sum,m);
+}
+}
+fp=fopen("redg.xls","w");
+fprintf(fp,"%d\t%d\t\n",m,n);
+for(i=0;i<n;i++)
+{for(j=0;j<n;j++)
+fprintf(fp,"%d\t",x[i][j]);
+fprintf(fp,"\n");
+}
+fclose(fp);
+for(i=0;i<n;i++){
+free(a[i]);
+free(b[i]);
+free(x[i]);
+}
+free(a);
+free(b);
+free(x);
+}
