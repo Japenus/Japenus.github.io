@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="icon" href="../img/logo.png">
+</head>
+<body>
+    <div class="warn"></div>
+	<div class="htmleaf-container">
+		<div class="wrapper">
+			<div class="container">
+				<h1>新用户注册</h1>
+				<form class="form">
+					<input type="text" placeholder="请输入用户名" id="username" value="">
+					<input type="password" placeholder="请输入密码" id="pwd" value="">
+					<button type="submit" id="login-button">注册</button>
+				</form>
+			</div>
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script>
+	const tips=$(".warn");
+	tips.hide();
+	$('#login-button').click(function (event) {
+		event.preventDefault();
+		$('form').fadeOut(500);
+	});
+	$("#login-button").on('click',function () {
+		let user=$("#username");
+		let password=$("#pwd");
+		if (!user.val()){
+			tips.slideDown().html("用户名不能为空！");
+			setTimeout(function () {
+				tips.slideUp();
+			},3000);
+			$("h1")[0].innerHTML='注册失败!';
+		}else if (!password.val()){
+			tips.slideDown().html("密码不能为空！");
+			setTimeout(function () {
+				tips.slideUp();
+			},3000);
+			$("h1")[0].innerHTML='注册失败!';
+		}
+		else{
+			$('.wrapper').addClass('form-success');
+			$("h1")[0].innerHTML='注册成功!';
+			tips.addClass("success");
+			tips.slideDown().html("快去首页逛逛吧！");
+			setTimeout(function () {
+				tips.slideUp();
+			},3000);
+		}
+		$(".go-login").fadeOut(1000);
+		$(".tips").fadeOut(1000);
+	});
+	</script>
+<script>
+	deleteData();
+	$("#login-button").on('click',function () {
+		let user=$("#username");
+		let password=$("#pwd");
+		let getData=getLocal();
+		getData.push({
+			name:user.val(),
+			password:password.val()
+		})
+		saveData(getData);
+		setTimeout(function () {
+			window.location.href="../OwnPage/index.html";
+		},5000)
+	})
+	function saveData(data){
+		localStorage.setItem("info",JSON.stringify(data));
+	}
+	function getLocal(){
+		let data=localStorage.getItem("info");
+		if(data!=null)
+		{
+			return JSON.parse(data);
+		}
+		else
+		{
+			return [];
+		}
+	}
+	function deleteData() {
+		localStorage.clear();
+	}
+</script>
+</body>
+</html>

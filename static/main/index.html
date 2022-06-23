@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>V家首页</title>
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="icon" href="img/logo.png" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<div class=" demo">
+	<div class="content">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+			<div class="container">
+				<div class="title">
+					<h1>
+						<span style="--i:1;">W</span>
+						<span style="--i:2;">e</span>
+						<span style="--i:3;">l</span>
+						<span style="--i:4;">c</span>
+						<span style="--i:5;">o</span>
+						<span style="--i:6;">m</span>
+						<span style="--i:7;">e</span>
+						<span style="--i:8;margin-left: 3pc;">t</span>
+						<span style="--i:9;">o</span>
+						<span style="--i:10;margin-left: 3pc;">V</span>
+						<span style="--i:11;">-</span>
+						<span style="--i:12;">H</span>
+						<span style="--i:13;">o</span>
+						<span style="--i:14;">m</span>
+						<span style="--i:15;">e</span>
+					</h1>
+				</div>
+				<div class="main clearfix">
+					<nav id="menu" class="nav">
+						<ul>
+							<li><a href="../shop/index.html"><span class="icon"><i aria-hidden="true" class="icon-home"></i></span><span>首页</span></a></li>
+							<li><a href="../cart/index.html"><span class="icon"><i aria-hidden="true" class="icon-blog"></i></span><span>购物车</span></a></li>
+							<li><a href="../login/index.html"><span class="icon"><i aria-hidden="true" class="icon-contact"></i></span><span>登录</span></a></li>
+							<li><a href="../OwnPage/index.html"><span class="icon"><i aria-hidden="true" class="icon-team"></i></span><span>个人主页</span></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	var changeClass = function (r,className1,className2) {
+		var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+		if( regex.test(r.className) ) {
+			r.className = r.className.replace(regex,' '+className2+' ');
+		}
+		else{
+			r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+		}
+		return r.className;
+	};
+	var menuElements = document.getElementById('menu');
+	menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+	document.getElementById('menutoggle').onclick = function() {
+		changeClass(this, 'navtoogle active', 'navtoogle');
+	}
+	document.onclick = function(e) {
+		var mobileButton = document.getElementById('menutoggle'),
+				buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+		if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+			changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+		}
+	}
+</script>
+<script src="js/demo.js"></script>
+</body>
+</html>
