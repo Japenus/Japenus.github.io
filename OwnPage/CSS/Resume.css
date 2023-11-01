@@ -117,26 +117,25 @@ h2:hover{
     color: rgb(73, 249, 255);
 }
 .contentone{
-    width: 1500px;
-    height: 200px;
-    text-align: center;
-    color: rgb(73, 249, 255);
-    line-height: 200px;
-    scrollbar-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+    color: greenyellow;
     background-color: rgb(250, 247, 74,0.4);
-    margin-left: 10px;
-    border-radius: 60%;
-    /* border: blue solid 10px; */
+    border-radius: 20px;
 }
 .contenttwo{
-    text-align: center;
-    color: rgb(73, 249, 255);
-    line-height: 200px;
-    width: 1500px;
-    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: palegoldenrod;
+    margin: 0 auto;
+    width: 90%;
+    height: 20vh;
     scrollbar-width: 200px;
     background-color: rgba(89, 230, 248, 0.4);
-    margin-left: 10px;
-    border-radius: 60%;
-    /* border: blue solid 10px; */
+    border-radius: 20px;
 }
