@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>购物中心</title>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" media="all">
+<link href="http://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+<link rel="icon" href="../img/logo.png">
+<link href="css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/sortable.css">
+<link rel="stylesheet" href="css/htmleaf-demo.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/sortable.js"></script>
+</head>
+<body>
+<div class="htmleaf-container">
+    <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+		<ol class="carousel-indicators">
+			<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<!-- Third Slide -->
+			<div class="item active">
+				<!-- Slide Background -->
+				<img src="images/slide1.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+				<div class="bs-slider-overlay"></div>
+				<div class="container">
+					<div class="row">
+						<!-- Slide Text Layer -->
+						<div class="slide-text slide_style_left">
+							<h1 data-animation="animated zoomInRight">[莓]好  进行时</h1>
+							<p data-animation="animated fadeInLeft">不负好时光，限时升磅</p>
+							<a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInLeft">了解详情</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Slide -->
+			<!-- Second Slide -->
+			<div class="item">
+				<!-- Slide Background -->
+				<img src="images/slide2.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+				<div class="bs-slider-overlay"></div>
+				<div class="slide-text slide_style_center">
+					<h1 data-animation="animated flipInX">EXCLUSIVE GIFT</h1>
+					<p data-animation="animated lightSpeedIn">新人四重礼</p>
+					<a href="#" target="_blank" class="btn btn-default" data-animation="animated fadeInUp">详情</a>
+				</div>
+			</div>
+			<!-- End of Slide -->
+			<!-- Third Slide -->
+			<div class="item">
+				<!-- Slide Background -->
+				<img src="images/slide3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
+				<div class="bs-slider-overlay"></div>
+				<!-- Slide Text Layer -->
+				<div class="slide-text slide_style_right">
+					<h1 data-animation="animated zoomInLeft">多款人气产品</h1>
+					<p data-animation="animated fadeInRight">立享85折优惠</p>
+					<a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInRight">了解详情</a>
+				</div>
+			</div>
+		</div>
+		<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+			<span class="fa fa-angle-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<!-- Right Control -->
+		<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+			<span class="fa fa-angle-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+    </div>
+</div>
+<div class="htmleaf">
+	<main class="sortable">
+	<div class="container2">
+	<div class="wrapper">
+		<ul class="sortable__nav nav">
+			<li><a data-sjslink="all" class="nav__link">精美蛋糕</a></li>
+			<li><a data-sjslink="flatty" class="nav__link">筛选</a></li>
+		</ul>
+		<div id="sortable" class="sjs-default">
+   	<div data-sjsel="flatty">
+			<div class="card">
+			<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-1.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">蔓越莓红丝绒</h2><h4>Velour rouge</h4><p class="card__text">￥198.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="flatty">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-2.jpg" alt=""></a>
+			<div class="card-infos">
+				<h2 class="card__title">歌剧院</h2><h4>Opera</h4><p class="card__text">￥218.00</p>
+			</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="funny">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-3.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">Mini款-蓝莓轻乳拿破仑</h2><h4>Napoleon aux myrtilles</h4><p class="card__text">￥138.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="flatty">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-4.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">经典香草拿破仑</h2><h4>Napoleon vanille</h4><p class="card__text">￥198.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="flatty">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-5.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">黑森林拿破仑</h2><h4>La Foret noir</h4><p class="card__text">￥198.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="funny">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-6.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">瑞可塔厚爱</h2><h4>Ricotta</h4><p class="card__text">￥218.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="flatty">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-7.jpg" alt=""></a>
+			<div class="card-infos">
+				<h2 class="card__title">芒果*Mangue</h2><h4>Mangue chantilly</h4><p class="card__text">￥198.00</p>
+			</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="flatty">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-8.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">天使巧克力</h2><h4>Gateau des anges</h4><p class="card__text">￥198.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+		<div data-sjsel="funny">
+			<div class="card">
+				<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-9.jpg" alt=""></a>
+				<div class="card-infos">
+					<h2 class="card__title">鲜莓印雪</h2><h4>Fraise Chantilly</h4><p class="card__text">￥198.00</p>
+				</div>
+				<img src="../img/cart.png" id="cart" class="cart">
+			</div>
+		</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-10.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">巧克力黑兰</h2><h4>Lotus Noir</h4><p class="card__text">￥198.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-11.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">花漾*年华</h2><h4>Floraison</h4><p class="card__text">￥298.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-12.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">男友力</h2><h4>Charmes masculins</h4><p class="card__text">￥198.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-13.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">爱丽丝花境</h2><h4>Jardin d'Alice</h4><p class="card__text">￥298.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-14.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">胖达乐园</h2><h4>Panda Paradise</h4><p class="card__text">￥298.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-15.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">甜愿*生日蛋糕</h2><h4>Gateau d'anniversaire</h4><p class="card__text">￥298.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-16.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">香溢新芝</h2><h4>Fromage Veloute</h4><p class="card__text">￥198.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-17.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">茉意芒芒</h2><h4>Gateau de mangue avec jasmin</h4><p class="card__text">￥198.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-18.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">榴莲雪塔</h2><h4>Tarte au durian</h4><p class="card__text">￥218.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-19.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">黛西的旅行</h2><h4>Voyage de Daisy</h4><p class="card__text">￥218.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+			<div data-sjsel="funny">
+				<div class="card">
+					<a href="../detail/index.html" target="_blank"><img class="card__picture" src="./images/item-20.jpg" alt=""></a>
+					<div class="card-infos">
+						<h2 class="card__title">摩登茶道</h2><h4>Le The</h4><p class="card__text">￥198.00</p>
+					</div>
+					<img src="../img/cart.png" id="cart" class="cart">
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</main>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+<script src="js/bootstrap-touch-slider.js"></script>
+<script type="text/javascript">
+        $('#bootstrap-touch-slider').bsTouchSlider();
+</script>
+<script type="text/javascript">
+	document.querySelector('#sortable').sortablejs();
+</script>
+<script src="js/jquery-1.11.0.min.js"></script>
+<script>
+	let carts=$(".cart");
+	let cnames=$("h2");
+	let nums=$(".card__text");
+	deleteData();
+	for (let s=0;s<carts.length;s++){
+
+		carts[s].onclick=function () {
+			let getData=getLocal();
+			getData.push({
+				cname:cnames[s].innerHTML,
+				price:nums[s].innerHTML
+			})
+			saveData(getData);
+			window.location.href="../cart/index.html";
+		}
+	}
+	function saveData(data){
+		localStorage.setItem("cake",JSON.stringify(data));
+	}
+	function getLocal(){
+		let data=localStorage.getItem("cake");
+		if(data!=null)
+		{
+			return JSON.parse(data);
+		}
+		else
+		{
+			return [];
+		}
+	}
+	function deleteData() {
+		localStorage.clear();
+	}
+</script>
+</body>
+</html>

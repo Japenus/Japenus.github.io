@@ -1,0 +1,14 @@
+body{
+    background: rgba(119, 120, 121, 0.23);
+}
+.form{
+    background: rgba(126, 201, 241, 0.5);
+}
+#cart{
+    background: rgba(153, 246, 214, 0.97)!important;
+}
+h1{
+    text-align: center;
+    position: absolute;
+    margin-left: 40%;
+}
