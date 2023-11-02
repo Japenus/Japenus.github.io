@@ -1,21 +1,18 @@
 # React-Demo
+这是一个简单的演示示例
+### React做前端，NodeJS做后端
 
-### 基于reactjs && Node 通讯的简单演示
+* 使用webpack打包工具整合所有项目资源
+* 服务端使用Node.js原生语法搭建
+### 如何启动
 
-* Reactjs && ES6 && webpack构建移动端京东首页
-* 基于文件系统的Node.js服务端
-
-![Mou icon](./jd.png)
-
-### 安装与运行程序
-
-克隆项目
+克隆项目到本地
 
 ```
-> $ git clone https://github.com/CanFoo/react.git
+> $ git clone https://github.com/Japenus/japenus.github.io.git
 ```
 
-分别进入react目录和server目录下安装依赖包
+分别进入react目录和server目录执行
 
 ```
 > $ npm install
@@ -27,20 +24,14 @@
 > $ npm run start
 ```
 
-在react目录下启动webpack服务
+在react目录下运行启动前端服务
 
 ```
 > $ npm run dev
 ```
-
-发布项目文件命令
+项目打包部署
 
 ```
 > $ npm run build
 ```
-
-执行完`npm run dev`命令后，打开浏览器 `http://localhost:8080/`运行项目，后台服务端口为 `3000`
-
-
-
-
+启动后浏览器地址栏输入localhost:8080即可启动，后端默认端口3000
